@@ -51,6 +51,7 @@ window.title("Pesquisar Filmes")
 window.configure(bg="#3f4e51")
 window.geometry("600x300")
 window.resizable(False, False)
+window.iconbitmap("img\icon_movie.ico")
 
 #ícone
 search_icon = ImageTk.PhotoImage(Image.open("img\search_icon.png"))
@@ -62,7 +63,7 @@ entry = tk.Entry(window, width=30, borderwidth=0)
 entry.grid(row=0, column=1, padx=0, pady=0)
 
 # Criar botão de pesquisa
-search_button = tk.Button(window, text="Pesquisar", command=search_movie, bg="#d06f4c", fg="white", image=search_icon, compound=tk.LEFT)
+search_button = tk.Button(window, text="Pesquisar", command=search_movie, bg="#d06f4c", fg="white", padx=10, pady=10, image=search_icon, compound=tk.LEFT)
 search_button.grid(row=0, column=2, padx=10, pady=10)
 
 # Criar lista para exibir resultados da pesquisa
@@ -70,7 +71,7 @@ movie_listbox = tk.Listbox(window, width=50, borderwidth=0, bg='#3f4e51', fg="wh
 movie_listbox.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
 
 # Criar botão para exibir informações do filme selecionado
-info_button = tk.Button(window, text="Mostrar Informações", bg="#d06f4c", fg="white", border=0, command=show_movie_info)
+info_button = tk.Button(window, text="Mostrar Informações", bg="#d06f4c", fg="white", border=0, command=show_movie_info, padx=5, pady=10)
 info_button.grid(row=2, column=0, columnspan=4, padx=100, pady=20, sticky='nsew')
 
 # Configurar o layout da grade
